@@ -1,5 +1,6 @@
 {
 	"pages.loginPage": "Login",
+	"pages.homePage": "Home",
 
 	"loginPage.login": "Login",
 	"loginPage.password": "Password"

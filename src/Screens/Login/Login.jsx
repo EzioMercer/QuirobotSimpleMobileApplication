@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {Button, Body, CheckBox, Container, Content, Form, Input, Item, Label, ListItem, Text, View} from 'native-base';
+import {Button, Body, CheckBox, Container, Content, Form, Input, Item, Label, ListItem, Text} from 'native-base';
 import {useDispatch, useSelector} from 'react-redux';
 import useTranslate from '../../CustomHooks/useTranslate';
-import Hedaer from '../Header/Hedaer';
+import MyHeader from '../../Components/Header/Hedaer';
 import {signIn} from '../../Redux/Login/LoginAction';
 import ConfirmGoogleCaptcha from 'react-native-google-recaptcha-v2';
 
@@ -16,7 +16,6 @@ export default function Login() {
 	const loginLabel = useTranslate('loginPage.login');
 	const passwordLabel = useTranslate('loginPage.password');
 	const siteKey = '6LdJfysUAAAAAMH8Uudw74USsZfF1QKCFzHUOxUv';
-	// const baseUrl = 'https://www.google.com/recaptcha/api2/userverify';
 	const baseUrl = 'https://control.quriobot.com';
 	let recaptcha;
 
@@ -37,7 +36,7 @@ export default function Login() {
 
 	return (
 		<Container>
-			<Hedaer title="loginPage"/>
+			<MyHeader title="loginPage"/>
 			<Content>
 				{
 					terms ? (
